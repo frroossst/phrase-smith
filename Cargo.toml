@@ -3,6 +3,8 @@ cargo-features = ["codegen-backend"]
 name = "phrase_smith"
 version = "0.1.0"
 edition = "2024"
+license = "MIT"
+description = "generate human friendly but secure passphrases"
 
 [dependencies]
 tinyrand = "0.5.0"
