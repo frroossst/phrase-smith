@@ -1,0 +1,20 @@
+cargo-features = ["codegen-backend"]
+[package]
+name = "phrase_smith"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tinyrand = "0.5.0"
+tinyrand-std = "0.5.0"
+
+[profile.release]
+opt-level = "z"
+strip = true
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+debug = 0
+codegen-backend = "cranelift"
